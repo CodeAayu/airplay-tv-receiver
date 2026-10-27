@@ -7,6 +7,12 @@ an Apple TV.
 It is a thin Android app around [UxPlay](https://github.com/FDH2/UxPlay)'s AirPlay server, with
 video and audio decoded by the TV's own hardware.
 
+## Download
+
+Get the APK from the [latest release](https://github.com/CodeAayu/airplay-tv-receiver/releases/latest),
+then install it on the TV as described in [Installing on the TV](#installing-on-the-tv). It runs on
+ARM TVs with Android 8.0 or newer. To build it yourself instead, see [Building](#building).
+
 ## What works
 
 | From | How | Status |
@@ -88,10 +94,11 @@ the Gradle build is untested; `build-apk.sh` is the tested path.
    ```bash
    adb pair <tv-ip>:<pairing-port> <6-digit-code>
    ```
-4. Connect with the port shown on the main Wireless debugging screen, install and launch:
+4. Connect with the port shown on the main Wireless debugging screen, install and launch. Use the
+   downloaded APK's path, or `build/AirPlayTV.apk` if you built it yourself:
    ```bash
    adb connect <tv-ip>:<port>
-   adb install -r build/AirPlayTV.apk
+   adb install -r AirPlayTV-0.1.apk
    adb shell am start -n com.codeaayu.airplaytv/.MainActivity
    ```
 5. Turn wireless debugging off again when you're done.
