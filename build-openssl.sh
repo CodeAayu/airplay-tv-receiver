@@ -5,6 +5,7 @@ set -euo pipefail
 
 : "${ANDROID_HOME:=$HOME/Library/Android/sdk}"
 : "${ANDROID_NDK_ROOT:=$ANDROID_HOME/ndk/27.2.12479018}"
+export ANDROID_NDK_ROOT
 API=24
 HERE="$(cd "$(dirname "$0")" && pwd)"
 SRC="$HERE/third_party/openssl"
