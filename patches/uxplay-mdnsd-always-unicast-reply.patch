@@ -1,0 +1,15 @@
+diff --git a/lib/mdnsd/mdnsd.c b/lib/mdnsd/mdnsd.c
+index 97a1ba6..5b2b133 100644
+--- a/lib/mdnsd/mdnsd.c
++++ b/lib/mdnsd/mdnsd.c
+@@ -904,6 +904,10 @@ static void mdns_handle_query(mdnsd_t *mdnsd, const unsigned char *bytes,
+         mdns_send_response_locked(mdnsd, include_airplay, include_raop,
+                                   include_host, MDNSD_TTL_SERVICE, family,
+                                   NULL);
++#ifdef MDNSD_ALWAYS_UNICAST_REPLY
++        /* also answer the querier directly: some Wi-Fi routers drop multicast between clients */
++        unicast_reply = 1;
++#endif
+         if (from && (unicast_reply || from_port != htons(MDNS_PORT))) {
+             mdns_send_response_locked(mdnsd, include_airplay, include_raop,
+                                       include_host, MDNSD_TTL_SERVICE, family,

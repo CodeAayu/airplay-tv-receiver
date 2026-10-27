@@ -1,0 +1,16 @@
+# build output
+build/
+*.apk
+*.log
+
+# downloaded by fetch-deps.sh, OpenSSL built by build-openssl.sh
+third_party/
+
+# Android Studio / Gradle
+.gradle/
+.idea/
+.cxx/
+local.properties
+*.iml
+
+.DS_Store

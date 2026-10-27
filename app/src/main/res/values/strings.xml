@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AirPlay Receiver</string>
+    <string name="default_receiver_name">Google TV</string>
+    <string name="receiver_name">%1$s (AirPlay)</string>
+    <string name="ready_title">Ready for AirPlay</string>
+    <string name="hint">On your Mac, open Control Center → Screen Mirroring and choose “%1$s”.\nOn iPhone or iPad, use Screen Mirroring in Control Center, or the AirPlay button in YouTube, Safari or Music.</string>
+    <string name="now_playing">AirPlay · Now Playing</string>
+    <string name="status_starting">Starting…</string>
+    <string name="status_ready">Waiting for a device on this Wi-Fi network · up to %1$s</string>
+    <string name="status_failed">Could not start the AirPlay server. Restart the app to try again.</string>
+</resources>
